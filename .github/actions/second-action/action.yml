@@ -1,0 +1,18 @@
+name: build-image
+description: action for building images
+inputs:
+  VAR3:
+    description: variable 3
+    required: true
+  VAR4:
+    description: variable 4
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - run: |
+          echo ${inputs.VAR3}
+      shell: bash
+    - run: |
+          echo ${inputs.VAR4}
+      shell: bash

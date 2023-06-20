@@ -1,0 +1,26 @@
+name: Build frontend DEV web
+on:
+  push:
+    branches: ['main']
+# env:
+#   AWS_REGION: us-east-1
+#   ENV: dev
+#   APP_NAME: frontend-web
+
+jobs:
+  first-action:
+    runs-on: local-system
+    steps:
+      - name: Building image.
+        uses: ./.github/actions/first-action
+        with:
+          VAR1: "This is first variable"
+          VAR2: "This is second variable"
+  second-action:
+    runs-on: local-system
+    steps:
+      - name: Building image.
+        uses: ./.github/actions/second-action
+        with:
+          VAR3: "This is third variable"
+          VAR4: "This is fourth variable"

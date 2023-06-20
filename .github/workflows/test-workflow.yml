@@ -8,6 +8,14 @@ on:
 #   APP_NAME: frontend-web
 
 jobs:
+  git-checkout:
+    runs-on: local-system
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: main
+          repository: abhishekchauhan98/flask-app.git
   first-action:
     runs-on: local-system
     steps:

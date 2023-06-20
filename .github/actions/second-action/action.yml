@@ -11,8 +11,8 @@ runs:
   using: "composite"
   steps:
     - run: |
-          echo ${inputs.VAR3}
+          echo ${{ inputs.VAR3 }}
       shell: bash
     - run: |
-          echo ${inputs.VAR4}
+          echo ${{ inputs.VAR4 }}
       shell: bash

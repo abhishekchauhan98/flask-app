@@ -18,11 +18,11 @@ runs:
       shell: bash
     - run: |
           echo ${{ inputs.VAR4 }}
-          if [ ${{ inputs.ENV }} == "prod" ]
-          then
-            BRANCH=prod
-          else
-            BRANCH=${{ inputs.ENV }}
-          fi
+          # if [ ${{ inputs.ENV }} == "prod" ]
+          # then
+          #   BRANCH=prod
+          # else
+          #   BRANCH=${{ inputs.ENV }}
+          # fi
           echo ${BRANCH}
       shell: bash

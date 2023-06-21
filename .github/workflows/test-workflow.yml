@@ -26,7 +26,7 @@ jobs:
   second-action:
     needs: git-checkout
     runs-on: local-system
-    environment: ${{ env.ENV }}
+    environment: ${{ vars.ENV }}
     steps:
       - name: Building image.
         uses: ./.github/actions/second-action

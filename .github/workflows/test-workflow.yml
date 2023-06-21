@@ -3,7 +3,7 @@ on:
   push:
     branches: ['main']
 env:
-  ENV: prod
+  ENV: dev
 
 jobs:
   git-checkout:

@@ -34,4 +34,4 @@ jobs:
           VAR3: "This is third variable"
           VAR4: "This is fourth variable"
           ENV: ${ENV}
-          BRANCH: ${{ env.BRANCH }}
+          BRANCH: ${{ secrets.BRANCH }}

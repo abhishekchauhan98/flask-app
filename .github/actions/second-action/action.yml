@@ -10,9 +10,9 @@ inputs:
   ENV:
     description: env name
     required: true
-  BRANCH:
-    description: branch name
-    required: true
+  # BRANCH:
+  #   description: branch name
+  #   required: true
 runs:
   using: "composite"
   steps:
@@ -21,5 +21,5 @@ runs:
       shell: bash
     - run: |
           echo ${{ inputs.VAR4 }}
-          echo ${{ inputs.BRANCH }}
+          echo ${{ vars.BRANCH }}
       shell: bash

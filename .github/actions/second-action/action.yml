@@ -20,8 +20,9 @@ runs:
           echo ${{ inputs.VAR4 }}
           if [ ${{ inputs.ENV }} == "prod" ]
           then
-              echo main
+            BRANCH=prod
           else
-              echo ${{ inputs.ENV }}
+            BRANCH=${{ inputs.ENV }}
           fi
+          echo ${BRANCH}
       shell: bash

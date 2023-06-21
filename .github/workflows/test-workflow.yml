@@ -2,10 +2,8 @@ name: Build frontend DEV web
 on:
   push:
     branches: ['main']
-# env:
-#   AWS_REGION: us-east-1
-#   ENV: dev
-#   APP_NAME: frontend-web
+env:
+  ENV: prod
 
 jobs:
   git-checkout:
@@ -34,3 +32,4 @@ jobs:
         with:
           VAR3: "This is third variable"
           VAR4: "This is fourth variable"
+          ENV: ${ENV}

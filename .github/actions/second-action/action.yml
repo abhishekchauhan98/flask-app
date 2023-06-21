@@ -7,6 +7,9 @@ inputs:
   VAR4:
     description: variable 4
     required: true
+  ENV:
+    description: env name
+    required: true
 runs:
   using: "composite"
   steps:
@@ -15,4 +18,10 @@ runs:
       shell: bash
     - run: |
           echo ${{ inputs.VAR4 }}
+          if [ ${{ inputs.ENV }} == "prod" ]
+          then
+              echo main
+          else
+              echo ${{ inputs.ENV }}
+          fi
       shell: bash
